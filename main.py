@@ -1,4 +1,4 @@
-﻿import os
+import os
 
 import cv2
 import numpy as np
@@ -16,8 +16,8 @@ DATA_PATH = os.getenv("DATA_PATH", "nutrition_dataset_large.csv")
 
 app = FastAPI(title="Food Nutrition API")
 
-model = YOLO("yolo26n-seg.pt")
-df = pd.read_csv(r"D:\ML-\nutrition_dataset_large.csv")
+model = YOLO(MODEL_PATH)
+df = pd.read_csv(DATA_PATH)
 
 food_map = {
     "pizza_slice": "pizza",
